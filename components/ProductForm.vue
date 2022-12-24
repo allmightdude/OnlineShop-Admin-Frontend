@@ -30,7 +30,7 @@
 
     <div class="form__control">
       <label for="description">Description</label>
-      <textarea id="description"></textarea>
+      <textarea id="description" rows="5"></textarea>
     </div>
 
     <!-- Photo  -->
@@ -48,8 +48,7 @@
     </div>
 
     <div class="form__control">
-
-        <base-button mode="orange">Add Product</base-button>
+      <base-button mode="orange">Add Product</base-button>
     </div>
   </form>
 </template>
@@ -59,10 +58,6 @@
   display: none;
 }
 
-.image-upload img {
-  width: 80px;
-  cursor: pointer;
-}
 .form {
   width: 100%;
   padding: 1rem;
@@ -83,5 +78,10 @@
 .fa-plus {
   font-size: 4rem;
   color: #f1c40f;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
 }
 </style>

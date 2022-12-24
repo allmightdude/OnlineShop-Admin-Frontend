@@ -46,3 +46,16 @@ h2,
 h3 {
   color: #707070;
 }
+
+input , textarea{
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #bdc3c7;
+  padding: 0.5rem;
+}
+
+input:focus,
+textarea:focus
+{
+  outline: 1px solid #F1C40F;
+}
