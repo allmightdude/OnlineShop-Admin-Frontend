@@ -39,7 +39,7 @@ export default {
   border: 1px solid #c2c2c2;
 }
 
-.btn__grey {
+.grey {
   background-color: #f2f2f2;
 }
 

@@ -6,8 +6,18 @@
       <base-button mode="border" size="lg-size">Add new category</base-button>
       <base-button mode="border" size="lg-size">Add new owner</base-button>
     </div>
+
+    <!-- Products List -->
+    <products-list class="mt-2"></products-list>
   </main>
 </template>
+
+<script>
+import ProductsList from "../components/ProductsList.vue";
+export default {
+  
+}
+</script>
 
 <style lang="scss">
   * ,
@@ -28,11 +38,22 @@
     font-size: 62.5%;
   }
 
+  ul , li{
+    list-style: none;
+  }
+  .d-flex{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
   .mt-1{margin-top: 1rem;}
   .mt-2{margin-top: 2rem;}
   .mt-3{margin-top: 3rem;}
 
-  h1{
+  .pd-1{
+    padding: 1rem;
+  }
+  h1 , h2, h3{
     color: #707070;
   }
 </style>

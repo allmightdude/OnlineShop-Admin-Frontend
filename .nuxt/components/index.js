@@ -1,4 +1,7 @@
 export { default as BaseButton } from '../..\\components\\BaseButton.vue'
+export { default as BaseCard } from '../..\\components\\BaseCard.vue'
+export { default as ProductItem } from '../..\\components\\ProductItem.vue'
+export { default as ProductsList } from '../..\\components\\ProductsList.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

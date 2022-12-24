@@ -7,3 +7,6 @@ You can directly use them in pages and other components without the need to impo
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
 - `<BaseButton>` | `<base-button>` (components/BaseButton.vue)
+- `<BaseCard>` | `<base-card>` (components/BaseCard.vue)
+- `<ProductItem>` | `<product-item>` (components/ProductItem.vue)
+- `<ProductsList>` | `<products-list>` (components/ProductsList.vue)
