@@ -8,7 +8,7 @@
 
       <div class="pd-1">
         <!-- product title -->
-        <h3>Lord of the rings</h3>
+        <h3>{{product.title}}</h3>
 
         <div class="d-flex product__reviews mt-1">
           <div class="product__stars">
@@ -19,10 +19,10 @@
             <i class="fa fa-star"></i>
           </div>
 
-          <div class="product__reviews-numbers">(110)</div>
+          <div class="product__reviews-numbers">({{product.reviews.length}})</div>
         </div>
         <!-- product price -->
-        <span class="product__price mt-1">$ 10</span>
+        <span class="product__price mt-1">$ {{product.price}}</span>
 
         <div class="actions mt-2">
           <base-button size="sm-size" mode="grey">update</base-button>
@@ -32,6 +32,12 @@
     </base-card>
   </li>
 </template>
+
+<script>
+export default {
+    props :['product']
+}
+</script>
 
 <style lang="scss" scoped>
 .product {

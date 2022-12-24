@@ -8,14 +8,23 @@
     </div>
 
     <!-- Products List -->
-    <products-list class="mt-2"></products-list>
+    <products-list class="mt-2" :products="products"></products-list>
   </main>
 </template>
 
 <script>
-import ProductsList from "../components/ProductsList.vue";
 export default {
-  
+    async asyncData({$axios}){
+        try {
+            let response = await $axios.get(`http://localhost:4000/api/products`);
+            const products = response.data.products;
+            return{
+                products
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    },
 }
 </script>
 
