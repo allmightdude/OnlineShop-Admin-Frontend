@@ -8,5 +8,6 @@ You can directly use them in pages and other components without the need to impo
 
 - `<BaseButton>` | `<base-button>` (components/BaseButton.vue)
 - `<BaseCard>` | `<base-card>` (components/BaseCard.vue)
+- `<ProductForm>` | `<product-form>` (components/ProductForm.vue)
 - `<ProductItem>` | `<product-item>` (components/ProductItem.vue)
 - `<ProductsList>` | `<products-list>` (components/ProductsList.vue)

@@ -5,6 +5,9 @@
   "BaseCard": {
     "description": "Auto imported from components/BaseCard.vue"
   },
+  "ProductForm": {
+    "description": "Auto imported from components/ProductForm.vue"
+  },
   "ProductItem": {
     "description": "Auto imported from components/ProductItem.vue"
   },

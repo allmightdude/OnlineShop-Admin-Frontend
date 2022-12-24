@@ -1,5 +1,12 @@
 [
   {
+    "name": "product",
+    "path": "/product",
+    "component": "G:\\\\Project Files\\\\Resume\\\\Online Shop\\\\admin\\\\pages\\\\product.vue",
+    "chunkName": "pages/product",
+    "_name": "_017d0b63"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "G:\\\\Project Files\\\\Resume\\\\Online Shop\\\\admin\\\\pages\\\\index.vue",
