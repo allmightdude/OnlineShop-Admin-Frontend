@@ -50,12 +50,18 @@
         </label>
 
         <input id="file-input" type="file" @change="onFileSelected" />
-        <p>{{fileName}}</p>
+        <p>{{ fileName }}</p>
       </div>
     </div>
 
     <div class="form__control">
-      <base-button mode="orange">Add Product</base-button>
+      <base-button v-if="!isLoading" class="addProduct" mode="orange">
+        <span>Add Product</span>
+      </base-button>
+
+      <div v-else class="loader">
+        <img src="../static/img/loader.gif" alt="" />
+      </div>
     </div>
   </form>
 </template>
@@ -73,12 +79,15 @@ export default {
       stockQuantity: null,
       selectedFile: null,
       fileName: "",
+      isLoading: false,
     };
   },
 
   methods: {
     async addProduct() {
       try {
+
+        this.isLoading = true;
         let data = new FormData();
 
         data.append("categoryID", this.catID);
@@ -94,7 +103,9 @@ export default {
           "http://localhost:4000/api/products",
           data
         );
-        console.log(result);
+        this.isLoading = false;
+        this.$router.replace('/')
+
       } catch (error) {
         console.log(error);
       }
@@ -113,7 +124,7 @@ export default {
     display: none;
   }
 
-  label{
+  label {
     border: 1px dashed #ccc;
     width: 10rem;
     height: 10rem;
@@ -149,5 +160,19 @@ export default {
 textarea {
   width: 100%;
   resize: none;
+}
+.addProduct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  img{
+    width: 4rem;
+    height: 4rem;
+  }
 }
 </style>
