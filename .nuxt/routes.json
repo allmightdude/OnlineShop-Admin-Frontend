@@ -1,16 +1,20 @@
 [
   {
+    "name": "category",
+    "path": "/category",
+    "component": "G:\\\\Project Files\\\\Resume\\\\Online Shop\\\\admin\\\\pages\\\\category.vue",
+    "chunkName": "pages/category"
+  },
+  {
     "name": "product",
     "path": "/product",
     "component": "G:\\\\Project Files\\\\Resume\\\\Online Shop\\\\admin\\\\pages\\\\product.vue",
-    "chunkName": "pages/product",
-    "_name": "_017d0b63"
+    "chunkName": "pages/product"
   },
   {
     "name": "index",
     "path": "/",
     "component": "G:\\\\Project Files\\\\Resume\\\\Online Shop\\\\admin\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_6aaae4c6"
+    "chunkName": "pages/index"
   }
 ]

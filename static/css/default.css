@@ -60,3 +60,7 @@ textarea:focus
   outline: 1px solid #F1C40F;
 }
 
+.main-auto {
+  max-width: 50rem;
+  margin: 0 auto;
+}

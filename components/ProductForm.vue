@@ -37,7 +37,7 @@
 
     <div class="form__control">
       <label for="description">Description</label>
-      <textarea id="description" rows="5"></textarea>
+      <textarea id="description" rows="5" v-model="description"></textarea>
     </div>
 
     <!-- Photo  -->

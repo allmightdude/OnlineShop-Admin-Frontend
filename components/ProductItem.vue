@@ -3,7 +3,7 @@
     <base-card>
       <!-- product image -->
       <a href="#" class="product__image">
-        <img src="../static/img/amazonImg.jpg" alt="" />
+        <img :src="product.photo" alt="" />
       </a>
 
       <div class="pd-1">

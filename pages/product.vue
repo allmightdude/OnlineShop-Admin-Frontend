@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="main-auto">
     <h2>Add a new product</h2>
     <product-form :owners="owners" :categories="categories"></product-form>
   </main>
@@ -29,8 +29,5 @@ export default {
 </script>
 
 <style lang="scss">
-main {
-  max-width: 50rem;
-  margin: 0 auto;
-}
+
 </style>
