@@ -1,31 +1,38 @@
 <template>
-  <form class="form mt-2">
+  <form class="form mt-2" @submit.prevent="addProduct">
     <!-- category dropdown -->
     <div class="form__control">
       <label for="category">Category</label>
-      <select>
-        <option value="1">1</option>
-        <option value="1">2</option>
+      <select v-model="catID">
+        <option v-for="cat in categories" :key="cat._id" :value="cat._id">
+          {{ cat.title }}
+        </option>
       </select>
     </div>
 
     <!-- owner dropdown -->
     <div class="form__control">
       <label for="category">Owner</label>
-      <select>
-        <option value="1">1</option>
-        <option value="1">2</option>
+      <select v-model="ownerID">
+        <option v-for="owner in owners" :key="owner._id" :value="owner._id">
+          {{ owner.name }}
+        </option>
       </select>
     </div>
 
     <div class="form__control">
       <label for="title">Title</label>
-      <input type="text" class="form__input" />
+      <input type="text" class="form__input" v-model="title" />
     </div>
 
     <div class="form__control">
       <label for="price">Price</label>
-      <input type="number" class="form__input" />
+      <input type="number" class="form__input" v-model="price" />
+    </div>
+
+    <div class="form__control">
+      <label for="stockQuantity">StockQuantity</label>
+      <input type="number" class="form__input" v-model="stockQuantity" />
     </div>
 
     <div class="form__control">
@@ -42,8 +49,8 @@
           <i class="fa fa-plus"></i>
         </label>
 
-        <input id="file-input" type="file" />
-        <p>name of image</p>
+        <input id="file-input" type="file" @change="onFileSelected" />
+        <p>{{fileName}}</p>
       </div>
     </div>
 
@@ -53,9 +60,68 @@
   </form>
 </template>
 
+<script>
+export default {
+  props: ["categories", "owners"],
+  data() {
+    return {
+      catID: null,
+      ownerID: null,
+      title: "",
+      price: null,
+      description: "",
+      stockQuantity: null,
+      selectedFile: null,
+      fileName: "",
+    };
+  },
+
+  methods: {
+    async addProduct() {
+      try {
+        let data = new FormData();
+
+        data.append("categoryID", this.catID);
+        data.append("ownerID", this.ownerID);
+
+        data.append("title", this.title);
+        data.append("price", this.price);
+        data.append("description", this.description);
+        data.append("stockQuantity", this.stockQuantity);
+        data.append("photo", this.selectedFile);
+
+        let result = await this.$axios.$post(
+          "http://localhost:4000/api/products",
+          data
+        );
+        console.log(result);
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    onFileSelected(e) {
+      this.selectedFile = e.target.files[0];
+      this.fileName = e.target.files[0].name;
+    },
+  },
+};
+</script>
+
 <style lang="scss">
-.image-upload > input {
-  display: none;
+.image-upload {
+  input {
+    display: none;
+  }
+
+  label{
+    border: 1px dashed #ccc;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .form {
