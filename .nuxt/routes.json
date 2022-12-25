@@ -14,11 +14,18 @@
     "_name": "_c84c53b2"
   },
   {
-    "name": "product",
-    "path": "/product",
-    "component": "G:\\\\Project Files\\\\Resume\\\\Online Shop\\\\admin\\\\pages\\\\product.vue",
-    "chunkName": "pages/product",
-    "_name": "_017d0b63"
+    "name": "products",
+    "path": "/products",
+    "component": "G:\\\\Project Files\\\\Resume\\\\Online Shop\\\\admin\\\\pages\\\\products\\\\index.vue",
+    "chunkName": "pages/products/index",
+    "_name": "_35fca33c"
+  },
+  {
+    "name": "products-id",
+    "path": "/products/:id",
+    "component": "G:\\\\Project Files\\\\Resume\\\\Online Shop\\\\admin\\\\pages\\\\products\\\\_id.vue",
+    "chunkName": "pages/products/_id",
+    "_name": "_aee83d6c"
   },
   {
     "name": "index",
